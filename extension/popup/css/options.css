@@ -1,0 +1,212 @@
+@font-face {
+    font-family: OpenSansRegular;
+    src: url(fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url(fonts/OpenSans-Bold.ttf);
+}
+
+/* prevent img, text drag to input */
+*, *::after, *::before {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+}
+
+html,
+body,
+*    {
+    font-family: OpenSansRegular;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+input[type="text"] {
+    margin: 1px;
+    border: 1px solid lightgrey;
+}
+
+input:invalid:not(:focus) {
+    outline: 1px solid red;
+}
+
+.window {
+    width: 500px;
+    padding: 0 20px;
+}
+
+.window-title-container {
+    display: grid;
+    grid-template-columns: minmax(0, max-content) auto 24px;
+    grid-auto-rows: 30px;
+    grid-column-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.horizontal-line {
+    /* width: 90%; */
+    margin: 0px auto 30px;
+    border-bottom: 0.2px solid darkgrey;
+}
+
+.window-title-container .image {
+    display: block;
+    width: 32px;
+}
+
+.window-title-caption {
+    font-family: OpenSansBold;
+}
+
+.window-title-version {
+    font-size: 8px;
+}
+
+.exception-title {
+    margin: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+a.action {
+    display: inline;
+    color: lightgrey;
+    text-decoration: none;
+}
+
+a.action:hover {
+    color: darkgrey;
+}
+
+.switch-onoff .icon-enable {
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 3px;
+    font-size: 8px;
+}
+
+.switch-onoff .icon-disable {
+    font-size: 17px;
+}
+
+.exception-container-wrapper {
+    display: block;
+    height: 250px;
+    overflow-x: hidden;
+}
+
+.exception-container {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 10px;
+}
+
+.exception {    
+    display: flex;
+    align-items: center;
+}
+
+.exception input {
+    flex-grow: 1;
+}
+
+.exception .buttons {
+    padding: 0 10px;
+}
+
+.exception input:read-only{
+    border-color: transparent;
+}
+
+.exception input:read-only:focus {
+    outline: none;
+}
+
+.exception input:read-only:hover {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
+.exception:not(.edit) .btn-accept {
+    display: none;
+}
+
+.exception.edit .btn-edit {
+    display: none;
+}
+
+.exception.edit input::placeholder{
+    color: lightgrey;
+    font-size: 12px;
+}
+
+.exception.edit input:focus::placeholder{
+    opacity: 0;
+}
+
+.window-footer {
+    margin: 20px;
+    text-align: center;
+}
+
+.window-status-bar {
+    height: 20px;
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+    grid-column-gap: 5px;
+    width: 100%;
+    background: #fff7001f;
+    align-items: center;
+}
+
+.backend-status .backend-down {
+    display: block;
+    color: red;
+}
+
+.backend-status .backend-up {
+    display: none;
+    color: green;
+}
+
+.backend-status.alive .backend-down {
+    display: none;
+}
+
+.backend-status.alive .backend-up {
+    display: block;
+}
+
+
+.my-button {
+    background: #3194f7;
+    color: white;
+    padding: 10px;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.my-button:active {
+    background-color: #097bec;
+}
+
+/* hide intro prev button as it alters scenario if pressed */
+.introjs-prevbutton {
+    display: none;
+}

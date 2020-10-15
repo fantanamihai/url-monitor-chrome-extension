@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/introjs.min.css" media="screen">
+        <link rel="stylesheet" href="css/icomoon.css" media="screen">
+        <link rel="stylesheet" href="css/options.css" media="screen">
+
+        <!-- Scripts -->
+        <script type="application/javascript" src="js/jquery-3.5.0.min.js"></script>
+        <script type="application/javascript" src="js/intro.min.js"></script>
+        <script type="application/javascript" src="js/popup.js"></script>
+    </head>
+
+    <body>
+        <div class="window">
+            <div class="window-title-container">
+                <div class="window-title-left">
+                    <img class="image" src="img/url-filter.png">
+                </div>
+                <div class="window-title-middle">
+                    <span class="window-title-caption">
+                        URL Monitor
+                    </span>
+                    <span class="window-title-version"></span>
+                </div>
+                <div class="window-title-right">
+                    <a class="action switch-onoff" href="#">
+                        <i class="icon-enable"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="window-body">
+                <div class="exception-title">Exception URLs</div>
+                <div class="template" style="display: none">
+                    <input type="text" class="input-url" required spellcheck="false" placeholder='http://www.url.com OR use "r:" prefix for regular expressions'>
+                    <div class="buttons">
+                        <a class="action btn-accept" href="#">
+                            <i class="icon-check"></i>
+                        </a>
+                        <a class="action btn-edit" href="#">
+                            <i class="icon-edit"></i>
+                        </a>
+                        <a class="action btn-delete" href="#">
+                            <i class="icon-delete"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="exception-container-wrapper">
+                    <div class="exception-container"></div>
+                </div>
+            </div>
+            <div class="window-footer">
+                <a class="add-exception my-button">
+                    Add new exception URL
+                </a>
+            </div>
+            <div class="window-status-bar">
+                <span class="backend-url"></span>
+                <span class="backend-status">
+                    <span class="backend-up">up</span>
+                    <span class="backend-down">down</span>
+                </span>
+            </div>
+        </div>
+    </body>
+</html>

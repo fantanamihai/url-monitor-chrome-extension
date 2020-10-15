@@ -1,0 +1,24 @@
+{
+  "name": "URL Monitor",
+  "version": "1.0.0",
+  "author" : "Mihai Fantana",
+  "manifest_version": 2,
+  "description": "Web request monitor",
+  "icons": {
+    "48": "icons/url-monitor-icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/url-monitor-icon.png",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "page": "background/background.html",
+    "persistent": true 
+  },
+  "permissions": [
+    "background",
+    "storage",
+    "webRequest",
+    "<all_urls>"
+  ]
+}

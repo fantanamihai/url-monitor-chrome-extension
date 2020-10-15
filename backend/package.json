@@ -1,0 +1,11 @@
+{
+    "name": "nexthink-3-backend",
+    "version": "1.0.0",
+    "author": "Mihai Fantana",
+    "scripts": {
+        "start": "node listener.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
